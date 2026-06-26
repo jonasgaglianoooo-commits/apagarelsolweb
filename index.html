@@ -1,88 +1,110 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Apagar el Sol | Proyecto de Energías Renovables</title>
+    <title>Apagar el Sol | Proyecto Técnico</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
-<body class="bg-gray-50 text-gray-900">
+<body class="bg-slate-50 text-slate-900 font-sans">
 
-    <!-- Header -->
-    <header class="bg-white shadow-sm sticky top-0 z-50">
-        <nav class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
-            <h1 class="text-2xl font-bold text-blue-600">Apagar el Sol</h1>
-            <div class="space-x-6 text-sm font-medium">
-                <a href="#problema" class="hover:text-blue-600">El Problema</a>
-                <a href="#solucion" class="hover:text-blue-600">La Solución</a>
-                <a href="#beneficios" class="hover:text-blue-600">Beneficios</a>
+    <!-- Navbar -->
+    <nav class="fixed w-full bg-white/90 backdrop-blur-sm z-50 border-b border-slate-100">
+        <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+            <span class="text-xl font-bold text-blue-600">Apagar el Sol</span>
+            <div class="space-x-8 text-sm font-medium text-slate-600">
+                <a href="#intro" class="hover:text-blue-600">Introducción</a>
+                <a href="#desarrollo" class="hover:text-blue-600">Bitácora</a>
             </div>
-        </nav>
+        </div>
+    </nav>
+
+    <!-- Hero Summary -->
+    <header class="pt-32 pb-20 px-6 text-center bg-slate-50">
+        <div class="max-w-4xl mx-auto">
+            <h1 class="text-5xl font-extrabold text-slate-900 mb-6">Proyecto "Apagar el Sol"</h1>
+            <p class="text-xl text-slate-600 mb-10">Protección inteligente y automatizada para termotanques solares. Prevenimos el sobrecalentamiento, evitamos el desperdicio de agua y protegemos el equipo contra condiciones climáticas adversas.</p>
+            <a href="#intro" class="bg-blue-600 text-white px-8 py-3 rounded-xl font-semibold hover:bg-blue-700 transition">Conocer el proyecto en detalle</a>
+        </div>
     </header>
 
-    <!-- Hero Section -->
-    <section class="max-w-6xl mx-auto px-6 py-20 text-center">
-        <h2 class="text-5xl font-extrabold text-gray-900 mb-6">Protección Inteligente para Termotanques Solares</h2>
-        <p class="text-xl text-gray-600 mb-10 max-w-2xl mx-auto">Innovación técnica para maximizar la vida útil y eficiencia de sistemas térmicos solares, previniendo daños climáticos y pérdidas de agua.</p>
-        <a href="#solucion" class="bg-blue-600 text-white px-8 py-3 rounded-full font-semibold hover:bg-blue-700 transition">Conoce el Proyecto</a>
-    </section>
-
-    <!-- Problem Section -->
-    <section id="problema" class="bg-white py-20">
-        <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
-            <div>
-                <h3 class="text-3xl font-bold mb-6">El Desafío Técnico</h3>
-                <p class="text-gray-600 mb-4">Los sistemas de termotanques solares enfrentan riesgos críticos que comprometen su operatividad:</p>
-                <ul class="list-disc list-inside text-gray-600 space-y-2">
-                    <li>Pérdida de agua por sobrecalentamiento en épocas de baja demanda.</li>
-                    <li>Daños estructurales por granizo o tormentas severas.</li>
-                    <li>Reducción de la vida útil del equipo por exposición extrema.</li>
-                </ul>
-            </div>
-            <div class="bg-gray-200 h-64 rounded-xl flex items-center justify-center text-gray-500">
-                [Imagen: Problema/Daños en equipo]
+    <!-- Introducción y Fundamentación -->
+    <section id="intro" class="py-20 bg-white">
+        <div class="max-w-4xl mx-auto px-6">
+            <h2 class="text-3xl font-bold mb-12 text-center">Introducción y Fundamentación</h2>
+            
+            <div class="grid md:grid-cols-2 gap-12">
+                <div class="space-y-6 text-slate-600 leading-relaxed">
+                    <div class="flex items-start gap-4">
+                        <i class="fa-solid fa-solar-panel text-2xl text-blue-500 mt-1"></i>
+                        <p>Los tanques termosolares de tubos de vacío son una forma eficiente y sustentable para el calentamiento de agua. Sin embargo, presentan inconvenientes con respecto a las altas temperaturas que puede alcanzar el agua en jornadas de intensa radiación solar.</p>
+                    </div>
+                    <div class="flex items-start gap-4">
+                        <i class="fa-solid fa-droplet-slash text-2xl text-blue-500 mt-1"></i>
+                        <p>Para evitar daños causados por el exceso de presión, estos equipos cuentan con una válvula de alivio que libera vapor, produciendo una pérdida constante de agua, desperdicio y disminución de la eficiencia.</p>
+                    </div>
+                </div>
+                
+                <div class="space-y-6 text-slate-600 leading-relaxed">
+                    <div class="flex items-start gap-4">
+                        <i class="fa-solid fa-user-graduate text-2xl text-blue-500 mt-1"></i>
+                        <p>Ante esto, alumnos de 4° año desarrollamos este proyecto para evitar el desperdicio de agua y proteger los tubos de vacío, frágiles ante la lluvia y granizo.</p>
+                    </div>
+                    <div class="flex items-start gap-4">
+                        <i class="fa-solid fa-gears text-2xl text-blue-500 mt-1"></i>
+                        <p>La propuesta consiste en una cortina blackout automatizada con Arduino, capaz de regular la radiación recibida y brindar protección física. Un sensor monitorea la temperatura; al llegar a 80°C, la cortina se cierra automáticamente. Al descender a 60°C, se abre para retomar el funcionamiento normal.</p>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Solution Section -->
-    <section id="solucion" class="py-20">
-        <div class="max-w-6xl mx-auto px-6 text-center">
-            <h3 class="text-3xl font-bold mb-12">Nuestra Solución: "Apagar el Sol"</h3>
-            <p class="text-xl text-gray-600 max-w-3xl mx-auto mb-10">Desarrollamos una cortina protectora automática, diseñada específicamente para mitigar estos riesgos. Es un sistema robusto que integra protección física contra agentes climáticos y un mecanismo de control para gestionar la incidencia solar.</p>
-            <div class="bg-gray-200 h-96 rounded-xl flex items-center justify-center text-gray-500">
-                [Imagen: Prototipo del Proyecto]
-            </div>
-        </div>
-    </section>
-
-    <!-- Benefits Section -->
-    <section id="beneficios" class="bg-white py-20">
-        <div class="max-w-6xl mx-auto px-6">
-            <h3 class="text-3xl font-bold mb-12 text-center">Impacto y Beneficios</h3>
-            <div class="grid md:grid-cols-3 gap-8">
-                <div class="p-6 bg-gray-50 rounded-xl border border-gray-100">
-                    <h4 class="font-bold mb-2">Eficiencia Operativa</h4>
-                    <p class="text-gray-600 text-sm">Previene el estancamiento y la pérdida innecesaria de agua, optimizando el funcionamiento del sistema.</p>
+    <!-- Bitácora de Desarrollo -->
+    <section id="desarrollo" class="py-20">
+        <div class="max-w-4xl mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-16">Registro de Actividades</h2>
+            <div class="space-y-16">
+                <!-- Día 29-05 -->
+                <div class="grid md:grid-cols-2 gap-8 items-center">
+                    <img src="images/image1.jpg" alt="Actividad 29-05" class="rounded-2xl shadow-lg">
+                    <div>
+                        <h3 class="text-xl font-bold mb-2">29-05: Inicio</h3>
+                        <p class="text-slate-600 text-sm">Diseñamos la estructura, generamos imágenes del sistema, listado de materiales y bocetos a mano alzada.</p>
+                    </div>
                 </div>
-                <div class="p-6 bg-gray-50 rounded-xl border border-gray-100">
-                    <h4 class="font-bold mb-2">Protección Duradera</h4>
-                    <p class="text-gray-600 text-sm">Resistencia superior ante granizo y lluvias intensas, protegiendo la inversión tecnológica.</p>
+                <!-- Día 08-06 -->
+                <div class="grid md:grid-cols-2 gap-8 items-center">
+                    <div class="order-2 md:order-1">
+                        <h3 class="text-xl font-bold mb-2">08-06: Estructura</h3>
+                        <p class="text-slate-600 text-sm">Cortes de montantes y soleras de chapa, montaje de estructura, falta anclaje de motor y guías.</p>
+                    </div>
+                    <img src="images/image6.jpg" alt="Actividad 08-06" class="rounded-2xl shadow-lg order-1 md:order-2">
                 </div>
-                <div class="p-6 bg-gray-50 rounded-xl border border-gray-100">
-                    <h4 class="font-bold mb-2">Sustentabilidad</h4>
-                    <p class="text-gray-600 text-sm">Aumenta la vida útil de los colectores solares, promoviendo un uso más responsable de la tecnología renovable.</p>
+                <!-- Día 12-06 -->
+                <div class="grid md:grid-cols-2 gap-8 items-center">
+                    <img src="images/image7.jpg" alt="Actividad 12-06" class="rounded-2xl shadow-lg">
+                    <div>
+                        <h3 class="text-xl font-bold mb-2">12-06: Montaje</h3>
+                        <p class="text-slate-600 text-sm">Realizamos montaje de motor eléctrico y ejes de cortinas sobre los montantes de chapa. Estructura armada.</p>
+                    </div>
+                </div>
+                <!-- Día 22-06 -->
+                <div class="grid md:grid-cols-2 gap-8 items-center">
+                    <div class="order-2 md:order-1">
+                        <h3 class="text-xl font-bold mb-2">22-06: Automatización</h3>
+                        <p class="text-slate-600 text-sm">Evaluación de automatización con Arduino para el despliegue y cerrado. Pruebas de funcionamiento.</p>
+                    </div>
+                    <img src="images/image5.jpg" alt="Actividad 22-06" class="rounded-2xl shadow-lg order-1 md:order-2">
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-gray-900 text-white py-10">
-        <div class="max-w-6xl mx-auto px-6 text-center">
-            <p class="font-semibold">Proyecto "Apagar el Sol"</p>
-            <p class="text-sm text-gray-400">4to Año - Especialidad en Energías Renovables</p>
-        </div>
+    <footer class="py-12 text-center text-slate-500 text-sm">
+        <p class="font-bold text-slate-900 mb-2">Apagar el Sol</p>
+        <p>Proyecto Técnico | 4to Año Energías Renovables</p>
     </footer>
 
 </body>
