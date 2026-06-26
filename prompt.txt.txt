@@ -1,0 +1,5 @@
+necesito que me ayudes a mejorar la pagina web que tenmos para presentar nuestro proyecto apagar el sol, que es una
+   cortina protectora de termotanques solares para evitar que se pierda agua por sobrecalentamieno como asi tambien
+   proteger el equipo ante la aparicion de granizo o lluvias fuertes. quiero que uses html5 con tailwind css para
+   lograr una pagina web moderna y rapida. quiero que sea 100% estatica y que me ayudes a mejorar el copywriting acorde
+   a un proyecto de 4to año del secundaria tecnica especializada en energias renovables
